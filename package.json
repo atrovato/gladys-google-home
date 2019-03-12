@@ -1,0 +1,27 @@
+{
+  "name": "gladys-google-home",
+  "version": "1.0.0",
+  "description": "Connect Gladys to Google Home",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atrovato/gladys-google-home.git"
+  },
+  "keywords": [
+    "gladys",
+    "google-home"
+  ],
+  "author": "ALexandre Trovato",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/atrovato/gladys-google-home/issues"
+  },
+  "homepage": "https://github.com/atrovato/gladys-google-home#readme",
+  "dependencies": {
+    "google-home-player": "^1.0.3",
+    "queue": "^6.0.0"
+  }
+}
