@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/atrovato/gladys-google-home#readme",
   "dependencies": {
+    "bluebird": "^3.5.3",
     "google-home-player": "^1.0.3",
     "queue": "^6.0.0"
   }
