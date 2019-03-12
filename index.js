@@ -3,7 +3,9 @@ const notify = require('./lib/notify.js');
 const setup = require('./lib/setup.js');
 
 module.exports = function () {
-  setup();
+  gladys.on('ready', function () {
+    setup();
+  });
 
   return {
     say: say,
