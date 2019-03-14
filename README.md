@@ -14,3 +14,17 @@ Slug: google-home
 ```
 
 Add a new Gladys parameter __GOOGLE_HOME_IP__ with your Google Home IP (example: 192.168.1.25).
+
+## Information
+
+It also can read Gladys notification with your Google Home, according to configure Gladys notification in parameters menu.
+
+## Script
+
+Add a new script, and let's talk :
+```
+gladys.modules['google-home'].say({
+  text: "Nice to see you at home",
+  language: "en"
+});
+```
