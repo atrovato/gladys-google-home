@@ -11,6 +11,6 @@ module.exports = function () {
   return {
     say: say,
     notify: notify,
-    setup: setup
+    install: setup
   };
 };
