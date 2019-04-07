@@ -27,7 +27,7 @@ describe('Gladys module index', function () {
     gladys = new EventEmitter();
     expectedResult = {
       say: libMock,
-      setup: libMock,
+      install: libMock,
       notify: libMock
     };
   });
