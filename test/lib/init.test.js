@@ -44,7 +44,7 @@ describe('Gladys module init', function () {
         assert.equal(e, paramIP, 'Invalid result');
         assert.equal(paramRequested, 'GOOGLE_HOME_IP', 'Invalid param');
         assert.isNotOk(initState, 'Should not have been initialized');
-        assert.isNotOk(shared.google_home, 'GoogleHome should not have been initialized');
+        assert.isNotOk(shared.google_homes, 'GoogleHome should not have been initialized');
 
         done();
       });
@@ -65,7 +65,7 @@ describe('Gladys module init', function () {
         assert.equal(e, expectedResult, 'Invalid result');
         assert.equal(paramRequested, 'GOOGLE_HOME_IP', 'Invalid param');
         assert.isOk(initState, 'Should have been initialized');
-        assert.isOk(shared.google_home, 'GoogleHome should have been initialized');
+        assert.isOk(shared.google_homes, 'GoogleHome should have been initialized');
 
         done();
       }).catch((e) => {
