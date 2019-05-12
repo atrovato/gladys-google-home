@@ -8,7 +8,7 @@ const expectedLang = 'FR';
 let queued = false;
 let started = false;
 let talk = false;
-let googleHomes=[];
+let googleHome;
 let startStatus = false;
 
 const libMock = {
@@ -22,7 +22,7 @@ const libMock = {
       callback(startStatus);
     }
   },
-  google_homes: googleHomes
+  google_home: googleHome
 };
 
 var say = proxyquire('../../lib/say.js', {
@@ -60,14 +60,14 @@ describe('Gladys module say', function () {
   });
 
   it('Google Home initialized', (done) => {
-    libMock.google_homes.push({
+    libMock.google_home = {
       say: (text, lang) => {
         talk = true;
         assert.equal(text, expectedText, 'Invalid text');
         assert.equal(lang, expectedLang, 'Invalid lang');
         return Promise.resolve();
       }
-    });
+    };
 
     say(params)
       .then((e) => {
@@ -84,14 +84,14 @@ describe('Gladys module say', function () {
   it('Google Home start error', (done) => {
     startStatus = true;
 
-    libMock.google_homes.push({
+    libMock.google_home = {
       say: (text, lang) => {
         talk = true;
         assert.equal(text, expectedText, 'Invalid text');
         assert.equal(lang, expectedLang, 'Invalid lang');
         return Promise.resolve();
       }
-    });
+    };
 
     say(params)
       .then((e) => {
